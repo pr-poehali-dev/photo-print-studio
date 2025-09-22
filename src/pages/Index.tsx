@@ -59,22 +59,23 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-        <div className="container mx-auto px-4">
+      <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-primary via-secondary to-accent relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold font-montserrat mb-6 text-gray-900">
+              <h1 className="text-5xl md:text-6xl font-bold font-montserrat mb-6 text-white drop-shadow-lg">
                 Студия фотопечати
-                <span className="block text-primary">dB Фото</span>
+                <span className="block text-white">dB Фото</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8">
+              <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow">
                 Печатаем ваши воспоминания с профессиональным качеством. 
                 Фотографии, альбомы, наклейки и открытки — всё для сохранения важных моментов.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg"
+                  className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg font-semibold shadow-lg"
                   onClick={() => scrollToSection('pricing')}
                 >
                   <Icon name="Camera" className="mr-2" size={20} />
@@ -83,7 +84,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg"
+                  className="border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold shadow-lg"
                   onClick={() => scrollToSection('contacts')}
                 >
                   <Icon name="MessageCircle" className="mr-2" size={20} />
@@ -176,7 +177,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 bg-gray-50">
+      <section id="pricing" className="py-16 bg-gradient-to-r from-secondary/20 via-primary/20 to-accent/20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold font-montserrat text-center mb-12 text-gray-900">
             Прайс-лист
@@ -307,9 +308,10 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contacts" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-montserrat text-center mb-12 text-gray-900">
+      <section id="contacts" className="py-16 bg-gradient-to-br from-accent/30 via-primary/30 to-secondary/30 relative">
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold font-montserrat text-center mb-12 text-white drop-shadow-lg">
             Свяжитесь с нами
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
